@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop</title>
+
+</head>
+<body background= "porquinhodaindia.png"> 
+
+    <center>
+    <form action="processaItens.php" method="post" >
+
+        <p align="center"><img src="india.png" alt="some text" width="100" height="100"/>
+        </p>
+
+    <p align="center">
+        <p style="color:white">
+        Nome: <input type="text" name="nome" >        Sobrenome: <input type="text" name="nome" >
+        <br>
+        Senha: <input type="password" name="pwd" id="pwd">   Confirmar: <input type="password" name="pwd" id="pwd">
+        <br>
+        Email: <textarea name="text" rows="1" cols="20" > @gmail.com</textarea>
+        <br>
+        CPF: <input type="password" name="pwd" id="pwd">
+        <br>
+        Endereço: <input type="text" name="nome" >
+        <br>
+        Data de Nascimento: <input type="text" name="nome" >
+        <br>
+        Celular: <input type="password" name="pwd" id="pwd">
+        <br>
+        Descrever infermidades:
+        <br>
+        <textarea name="comentario" rows="5" cols="20" > Escreva os problemas</textarea>
+    </p>
+
+    <Select name="Pet">
+        <option value="1">Cachorro</option>
+        <option value="2">Gato</option>
+        <option value="3">Porquinho da Índia</option>
+        <option value="4">Passáro</option>
+        <option value="5">Peixe</option>
+    </Select>
+
+        <p align="center">
+            <table border="1">
+        <ul>
+            <tr>
+                <th><p style=></p></th>
+                <th><p style="color:white">Nome</p></th>
+                <th><p style="color:white">Raça</p></th>
+                <th><p style="color:white">Idade</p></th>
+                <th><p style="color:white">Enfermidades</p></th>
+                <th><p style="color:white">Históricos/vacinas</p></th>
+            </tr>
+            <tr>
+                <th><p style=></p></th>
+                <th><p style=><input type="text" name="nome" ></p></th>
+                <th><p style=><input type="text" name="raça" ></p></p></th>
+                <th><p style=><input type="text" name="idade" ></p></p></th>
+                <th><p style=><input type="text" name="endermidades" ></p></p></th>
+                <th><p style=><input type="text" name="historico" ></p></p></th>
+            </tr>
+        </ul>
+    </p>
+
+     <p align="center">
+        <table border="1">
+        <ul>
+            <tr>
+                <th><p style=></p></th>
+                <th><p style=>Produto</p></th>
+                <th><p style="color:white">Preço</p></th>
+                <th><p style=>Categoria</p></th>
+            </tr>
+            <tr>
+                <td><p style="color:white"><img src=guia.png alt="some text" width=180 height=150/></p></td>
+                <td><p style="color:white">Guia</p></td>
+                <td><p style="color:white">R$ 21,99</p></td>
+                <td><p style="color:white">Acessório</p></td>        
+            </tr>
+            <tr>
+                <td><p style="color:white"><img src=gaiola.png alt="some text" width=180 height=150/></p></td>
+                <td><p style="color:white">Gaiola</p></td>
+                <td><p style="color:white">R$ 500,00</p></td>
+                <td><p style="color:white">Móvel</p></td>
+            </tr>
+            <tr>
+                <td><p style=><img src=brinquedo.png alt="some text" width=180 height=150/></p></td>
+                <td><p style=>Brinquedo</p></td>
+                <td><p style=>R$ 7,99</p></td>
+                <td><p style=>Brinquedo</p></td>
+            </tr>
+            <tr>
+                <td><p style="color:white"><img src=roupaa.png alt="some text" width=180 height=150/></p></td>
+                <td><p style=>Roupa</p></td>
+                <td><p style="color:white">R$ 18,50</p></td>
+                <td><p style="color:white">Vestuário</p></td>
+            </tr>
+            <tr>
+                <td>
+                <p align="center">
+                    <input type="submit" value="Enviar"/>
+                </td>
+            </tr>
+        </ul>    
+     </p>
+     
+    </center>
+</body>
+</html>
