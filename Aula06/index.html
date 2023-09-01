@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="metodos.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momozono</title>
+</head>
+<body>
+
+    <script>
+        console.log("iniciando script")
+        //somente em javascript
+        var nome = "Nanami";
+        var idade= 1;
+
+        mostrarNome(nome);
+        escreverNaTela();
+        var escolha = prompt("1SOMA 2SUBTRAÇÃO")
+        var v1 = prompt("Digite um valor 1");
+        var v2 = prompt("Digite um valor 2");
+        if(escolha == "soma" || escolha == "SOMA"){
+            if(v1 == "SAIR" || v2 == "SAIR")
+                alert("SAINDO DO PROGRAMA");
+            else{
+                var soma = parseInt(v1) + parseInt(v2);
+                if(isNaN(soma))
+                    alert("Você digitou um valor nulo(inválido): " + soma);
+                else
+                    alert("Resultado soma: " + soma);
+                }
+            }
+        else{
+            if(v1 == "SAIR" || v2 == "SAIR")
+                alert("SAINDO DO PROGRAMA");
+            else{
+                var subtrair = parseInt(v1) - parseInt(v2);
+                if(isNaN(subtrair))
+                    alert("Você digitou um valor nulo(inválido): " + subtrair);
+                else
+                    alert("Resultado soma: " + subtrair);
+                }
+            }
+        console.log("finalizando script")
+        
+    exercicio6();
+    </script>
+</body>
+</html>
