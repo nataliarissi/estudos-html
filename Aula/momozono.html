@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momozono</title>
+</head>
+<body>
+    <Script>
+
+        function eventoBotao(){
+            alert("Olá Mundo");
+        }
+
+        function meuNome(){
+            var nome = document.f.nome.value;
+            var nomePorId = document.getElementById("nome").value;
+            var momozono = document.f.amorDaVida.value;
+            var momozonoPorId = document.getElementById("amorDaVida").value;
+
+            if(nomePorId == ""){
+                alert("Favor digitar sua escolha");
+                return;
+            }
+            if(momozonoPorId == "selecione"){
+                alert("Favor selecionar outra opção");
+                return;
+            }
+            alert(nome + "  ama  " + momozono);
+
+        }
+
+        function calcular(){
+            var v1 = document.getElementById("v1").value;
+            var v2 = document.getElementById("v2").value;
+            var op = document.getElementById("op").value;
+            var resultado = document.getElementById("resultado");
+
+            if(isNaN(v1) || isNaN(v2)){
+                resultado.innerHTML = "Favor digitar somente números";
+                v1.value="";
+                v2.value="";
+                return;
+            }
+
+            if(op == "+"){
+                resultado.innerHTML = (parseFloat(v1) + parseFloat(v2));
+            }else if(op == "-"){
+                resultado.innerHTML = (parseFloat(v1) - parseFloat(v2));
+            }
+        }
+
+    </Script>
+
+</br></br>
+Calculadora <br>
+<label for="v1">Valor 1 </label>
+<input type="text" name="v1" id="v1"/><br>
+<label for="v2">Valor 2 </label>
+<input type="text" name="v2" id="v2"/><br>
+<label for="op">Operação </label>
+ <select name="op" id="op">
+    <option value="+">somar</option>
+    <option value="-">subtrair</option>    
+</select>
+<br>
+<input type="button" onclick="calcular()"                     
+                     value="calcular"/>
+<div id="resultado"></div>
+                     <br><br>
+                        
+pegando informações do formulário
+    <form name="f">
+        <input type="text" name="nome" id="nome"></br>
+        <select name="amorDaVida" id="amorDaVida">
+            <option value="selecione">selecione</option>
+            <option value="nanami">nanami</option>
+            <option value="tomoe">tomoe</option>
+    </select>
+    </br>        
+        <input type="button" onclick="meuNome()"
+            value="clique"/>
+    </form>
+
+</br></br>
+evento do botão
+    <form>
+        <input type="button" onclick="eventoBotao()"
+            value="clique"/>
+    </form>
+</body>
+</html>
