@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+<html long="pt-br">
+<meta charset="utf-8">
+<meta name="viewport" content="device-width, initial-scale=1.0">
+</head>
+
+<script>
+    function limparCampos() {
+        document.getElementById('name').value = "";
+        document.getElementById('sobrenome').value = "";
+        document.getElementById('email').value = "";
+    }
+
+    function validarFormulario() {
+    var primeiroNome = document.getElementById("primeiro-nome").value;
+    var sobrenome = document.getElementById("sobrenome").value;
+    var email = document.getElementById("email").value;
+
+    if (primeiroNome === "" || sobrenome === "" || email === "") {
+        alert("Necessário o preenchimento de todos os campos");
+        return false;
+    } else {
+        window.location.href = "processa.php";
+        return true;
+    }
+}
+
+    function gerarFormulario() {
+            var tabela = "<table border='1'><tr><th>Aluno</th><th>Nota</th></tr>";
+            for (var n = 1; n <= 20; n++) {
+                var aluno = "Aluno " + n;
+                var nota = Math.floor(Math.random() * 101);
+                tabela += "<tr><td>" + aluno + "</td><td>" + nota + "</td></tr>";
+            }
+            tabela += "</table>";
+
+            var abrirRelatorio = window.open('', 'Formulário', 'width=600, height=400');
+            abrirRelatorio.document.open();
+            abrirRelatorio.document.write('<html><head><title>Notas dos alunos em Javascript</title></head><body>');
+            abrirRelatorio.document.write('<h1>Notas dos alunos em Javascript</h1>');
+            abrirRelatorio.document.write(tabela);
+            abrirRelatorio.document.write('</body></html>');
+            abrirRelatorio.document.close();
+        }
+
+</script>
+
+    <title>Formularios</title>
+        <body>
+            <table border = "2">
+                <td>
+                    
+            <div align="left">
+            <h1>Formulário - Dados Usuário</h1>
+            <form action="processa.php" method="post" onsubmit="return validarFormulario();">
+            
+                <label for="name"></label>
+                <h5>Primeiro nome: <input type="text" id="name" name="Primeiro Nome"  required></h5>
+            
+                <label for="sobrenome"></label>
+                <h5>Sobrenome: <input type="text" id="sobrenome" name="Sobrenome"  required></h5>
+
+                <label for="email"></label>
+                <h5>Email: <input type="email" id="email" name="email"  required></h5>
+
+                <input type="radio" id="Masculino" name="genero" value="Masculino">
+                        <label for="Masculino">Masculino</label><br>
+                        <input type="radio" id="Feminino" name="genero" value="Feminino">
+                        <label for="Feminino">Feminino</label><br>
+<br>
+
+            <input type="submit" value="Enviar">   
+            <input type="reset" value="Redefinir"> 
+        </div>
+        </td>
+        </table>
+            </form>
+            
+                <h1>Relatório da disciplina Javascript</h1>
+                <button onclick="gerarFormulario()">Criar Relatório</button>
+        </body>
+</html>
